@@ -1,9 +1,10 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import BotPage from './components/BotPage';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
-  const [bots, setBots]= useState()
+  const [bots, setBots]= useState([])
 
   useEffect(()=>{
     fetch(" http://localhost:3000/bots")
@@ -13,7 +14,11 @@ function App() {
 
   return (
     <div>
-      <BotPage bots={bots}/>
+      <Switch>
+      <Route path='/bots'>
+        <BotPage bots={bots}/>
+     </Route>
+     </Switch>
     </div>
   )
 }
