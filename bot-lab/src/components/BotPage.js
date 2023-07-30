@@ -23,12 +23,17 @@ function BotPage(){
     const removeBot = (bot) => {
       setYourBots(yourBots.filter((yourBot) => yourBot.id !== bot.id))
     }
+
+    function deleteBot (deletedBot){
+      const botsToDisplay = bots.filter((bot)=> bot.id !==deletedBot.id)
+      setBots(botsToDisplay)
+    }
   
     return ( 
         <div>
           <BotArmy bots={yourBots} handleRemoveBot={removeBot}/>
             <h2>Render Bot above</h2>
-            <BotList bots={bots} handleAddBot={addBot}/>
+            <BotList bots={bots} handleAddBot={addBot} deleteBot={deleteBot}/>
         </div>
     )
 }

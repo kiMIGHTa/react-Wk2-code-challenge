@@ -1,5 +1,14 @@
 import './BotList.css'
-function BotList({bots, handleAddBot}){
+function BotList({bots, handleAddBot, deleteBot}){
+
+    function deleteBot(bot){
+        fetch(`http://localhost:3000/bots/${bot.id}`, {
+            method: "DELETE",
+          })
+            .then((r) => r.json())
+            .then(()=>deleteBot(bot))
+        
+    }
     
        const renderBots =  bots.map((bot)=>{
            return (
@@ -9,6 +18,7 @@ function BotList({bots, handleAddBot}){
            <h3>{bot.name}</h3>
            <small>{bot.catchphrase}</small>
            </div>
+           <button onClick={()=>deleteBot(bot)}>X</button>
            </li>
        )})
 
