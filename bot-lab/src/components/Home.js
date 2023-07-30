@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom"
 
 function Home(){
     return(
         <div>
-            <Link to={'/bots'}>Select Your Bots</Link>
+            <h1>Select Your Bots</h1>
         </div>
     )
 }

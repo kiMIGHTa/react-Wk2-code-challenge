@@ -1,9 +1,6 @@
-import { useParams } from "react-router-dom"
 
 function BotArmy({bots ,handleRemoveBot}){
-    const params = useParams()
-    console.log(params.botId);
-
+   
     const myBots = bots.map((bot)=>{
       return (
         <div key={bot.id} onClick={()=>handleRemoveBot(bot)}>

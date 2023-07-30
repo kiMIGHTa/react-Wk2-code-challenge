@@ -1,10 +1,8 @@
 import BotList from "./BotList"
 import BotArmy from "./BotArmy";
-import {Route, useRouteMatch} from "react-router-dom"
 import { useState, useEffect } from "react";
 
 function BotPage(){
-    const match = useRouteMatch()
 
     const [bots, setBots]= useState([])
     const [yourBots, setYourBots] = useState([])
@@ -28,16 +26,9 @@ function BotPage(){
   
     return ( 
         <div>
-         <Route path={`${match.url}/:botId`}>
           <BotArmy bots={yourBots} handleRemoveBot={removeBot}/>
-          </Route>
-          <Route path={`${match.url}`}>
             <h2>Render Bot above</h2>
             <BotList bots={bots} handleAddBot={addBot}/>
-          </Route>
-
-         
-          
         </div>
     )
 }
