@@ -1,22 +1,19 @@
 import './App.css';
-import { useState, useEffect } from 'react';
 import BotPage from './components/BotPage';
 import { Route, Switch } from 'react-router-dom';
+import Home from './Home';
 
 function App() {
-  const [bots, setBots]= useState([])
 
-  useEffect(()=>{
-    fetch(" http://localhost:3000/bots")
-    .then((r)=>r.json())
-    .then((data)=> setBots(data))
-  },[])
 
   return (
     <div>
       <Switch>
       <Route path='/bots'>
-        <BotPage bots={bots}/>
+        <BotPage/>
+     </Route>
+     <Route path='/'>
+        <Home/>
      </Route>
      </Switch>
     </div>

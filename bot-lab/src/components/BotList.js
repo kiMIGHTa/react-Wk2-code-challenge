@@ -1,9 +1,9 @@
 import BotItem from "./BotItem"
 
-function BotList({bots}){
+function BotList({bots, handleAddBot}){
     
        const renderBots =  bots.map((bot)=>{
-           return <BotItem key={bot.id} botId={bot.id} image={bot.avatar_url} name={bot.name}/>
+           return <BotItem key={bot.id} botId={bot.id} bot={bot} addFunction={handleAddBot}/>
         })
 
     return (

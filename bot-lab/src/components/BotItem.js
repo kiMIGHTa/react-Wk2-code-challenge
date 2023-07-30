@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 
-function BotItem({botId, image, name}){
+function BotItem({botId, bot, addFunction}){
     return(
-        <li>
+        <li onClick={()=>addFunction(bot)}>
             <Link to={`/bots/${botId}`}>
-            <img src={image} alt={name}/>
-            <h3>{name}</h3>
+            <img src={bot.image} alt={bot.name}/>
+            <h3>{bot.name}</h3>
             </Link>
         </li>
     )
