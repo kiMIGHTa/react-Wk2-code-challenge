@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom"
 
-function BotArmy({bots}){
+function BotArmy({bots ,handleRemoveBot}){
     const params = useParams()
     console.log(params.botId);
 
     const myBots = bots.map((bot)=>{
       return (
-        <div key={bot.id}>
+        <div key={bot.id} onClick={()=>handleRemoveBot(bot)}>
         <img src={bot.avatar_url} alt={bot.name}/>
         <h2>{bot.name}</h2>
         <h3>{bot.bot_class}</h3>

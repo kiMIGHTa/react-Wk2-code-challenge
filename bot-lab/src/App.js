@@ -1,7 +1,7 @@
 import './App.css';
 import BotPage from './components/BotPage';
 import { Route, Switch } from 'react-router-dom';
-import Home from './Home';
+import Home from './components/Home';
 
 function App() {
 

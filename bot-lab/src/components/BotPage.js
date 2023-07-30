@@ -21,11 +21,15 @@ function BotPage(){
         setYourBots([...yourBots, bot])
       }
     }
+
+    const removeBot = (bot) => {
+      setYourBots(yourBots.filter((yourBot) => yourBot.id !== bot.id))
+    }
   
     return ( 
         <div>
          <Route path={`${match.url}/:botId`}>
-          <BotArmy bots={yourBots}/>
+          <BotArmy bots={yourBots} handleRemoveBot={removeBot}/>
           </Route>
           <Route path={`${match.url}`}>
             <h2>Render Bot above</h2>
