@@ -14,6 +14,14 @@ function BotPage(){
       .then((data)=> setBots(data))
     },[])
 
+    function deleteBotFromServer(bot){
+      fetch(`http://localhost:3000/bots/${bot.id}`, {
+          method: "DELETE",
+        })
+        .then(()=>deleteBot(bot))
+      
+  }
+
     const addBot = (bot) => {
       if (!yourBots.includes(bot)) {
         setYourBots([...yourBots, bot])
@@ -32,8 +40,8 @@ function BotPage(){
     return ( 
         <div>
           <BotArmy bots={yourBots} handleRemoveBot={removeBot}/>
-            <h2>Render Bot above</h2>
-            <BotList bots={bots} handleAddBot={addBot} deleteBot={deleteBot}/>
+            <h2>Your Bot Army</h2>
+            <BotList bots={bots} handleAddBot={addBot} removeBot={deleteBotFromServer}/>
         </div>
     )
 }

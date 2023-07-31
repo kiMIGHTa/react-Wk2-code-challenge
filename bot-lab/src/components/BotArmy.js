@@ -18,6 +18,7 @@ function BotArmy({bots ,handleRemoveBot}){
     
     return(
         <div>
+          <h3>Your bot army</h3>
           {myBots}
         </div>
     )

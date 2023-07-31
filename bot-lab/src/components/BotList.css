@@ -1,0 +1,57 @@
+/* Styling for the bot list container */
+.BotList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Styling for each bot item in the list */
+  .botCard {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #f7f7f7;
+    border-radius: 8px;
+    /* padding: 12px; */
+    margin-bottom: 16px;
+    background-color: #dacc08;
+    cursor: pointer;
+  }
+  
+  .botCard img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+  }
+  
+  .botCard h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  
+  .botCard small {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Styling for the 'remove' button */
+  button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 3%;
+  }
+  
+  button:hover {
+    background-color: #d32f2f;
+  }

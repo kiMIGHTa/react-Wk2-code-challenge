@@ -1,8 +1,8 @@
-
+import './Home.css'
 function Home(){
     return(
-        <div>
-            <h1>Select Your Bots</h1>
+        <div className="header">
+            <h1>CREATE YOUR BOT ARMY</h1>
         </div>
     )
 }

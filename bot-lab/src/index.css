@@ -1,13 +1,32 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: rgb(162, 87, 2);
+  background: linear-gradient(
+    90deg,
+    rgb(216, 117, 25) 0%,
+    rgb(246, 136, 33) 100%
+  );
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+button {
+  font-family: "Press Start 2p", cursive;
+  font-size: 0.8rem;
+  border: 3px solid black;
+  padding: 0.5rem 1rem;
+  background-color: rgb(245, 158, 158);
+  box-shadow: inset -3px -3px 0 0 rgb(252, 124, 124);
+  transition: all 0.1s ease-in;
 }
